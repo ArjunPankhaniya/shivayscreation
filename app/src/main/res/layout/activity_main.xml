@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:background="@color/bg_yellow"
+            style="@style/archi_white_bold_Body2_20"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Login Form"
+            android:textSize="@dimen/_18sdp"/>
+
+        <EditText
+            android:id="@+id/main_email"
+            style="@style/archi_white_bold_Body2_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="24dp"
+            android:drawableLeft="@drawable/email_white"
+            android:drawablePadding="10dp"
+            android:hint="Enter Email ID :"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <FrameLayout
+            android:id="@+id/main_password_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_email"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <EditText
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/key_white"
+                android:id="@+id/main_password"
+                style="@style/archi_white_bold_Body2_20"
+                android:hint="Enter Password :"
+                android:inputType="textPassword"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
+
+            <ImageView
+                android:id="@+id/main_password_hide"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:src="@drawable/key_off_white" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/main_password_show"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:src="@drawable/password_show" />
+
+        </FrameLayout>
+
+        <CheckBox
+            android:id="@+id/main_remeber"
+            style="@style/check_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_password_frame"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Remember me" />
+
+        <RadioGroup
+            android:id="@+id/main_login_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_remeber"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/main_login"
+                style="@style/medium_20_button"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_remeber"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Log In" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/main_signup"
+                style="@style/medium_20_button"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_login"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Sign Up" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/forget_pass"
+            style="@style/text_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_login_signup"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Forget your password?" />
+
+        <TextView
+            style="@style/text_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/forget_pass"
+            android:textAlignment="viewEnd"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="Made By @ArjunPankhaniya" />
+
+    </RelativeLayout>
+
+</ScrollView>

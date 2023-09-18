@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/otplogin"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:background="@color/bg_yellow"
+            style="@style/archi_white_bold_Body2_20"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Login Form"
+            android:textSize="@dimen/_18sdp"/>
+
+        <EditText
+            android:id="@+id/login_with_otp_contact"
+            style="@style/archi_white_bold_Body2_20"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/otplogin"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:drawableLeft="@drawable/email_online"
+            android:drawablePadding="10dp"
+            android:hint="Contact No."
+            android:inputType="phone"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:maxLength="10" />
+
+        <CheckBox
+            android:id="@+id/login_with_otp_remeber"
+            style="@style/check_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_with_otp_contact"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Remember me" />
+
+
+        <RadioGroup
+            android:id="@+id/otp_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_with_otp_remeber"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/login_with_otp_login"
+                style="@style/medium_20_button"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_remeber"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Log In" />
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/login_with_otp_signup"
+                style="@style/medium_20_button"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_login"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Sign Up" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</ScrollView>
