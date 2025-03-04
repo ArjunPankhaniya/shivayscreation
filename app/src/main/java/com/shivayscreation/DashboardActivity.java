@@ -50,8 +50,12 @@ public class DashboardActivity extends AppCompatActivity {
                 }
                 else if (item.getId() == PROFILE_MENU) {
                     FragmentManager manager = getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.dashboard_relative, new ProfileFragment()).commit();
+                    ProfileFragment profileFragment = new ProfileFragment();
+                    manager.beginTransaction().replace(R.id.dashboard_relative, profileFragment).commit();
                     mBottomNavigation.show(PROFILE_MENU, true);
+                    // Retrieve profile data here and pass it to the profileFragment
+                    // For example:
+                    // profileFragment.retrieveProfileData();
                 } else {
 
                 }

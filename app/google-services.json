@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "360422737742",
+    "firebase_url": "https://shivayscreation-default-rtdb.firebaseio.com",
+    "project_id": "shivayscreation",
+    "storage_bucket": "shivayscreation.appspot.com",
+
+
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "shivayscreation": {
+      "USERS": {
+        "$user_id": {
+          ".read": "auth.uid == $user_id",
+          ".write": "auth.uid == $user_id",
+          "CONTACT": {
+
+            ".read": "auth.uid == $user_id",
+            ".write": "auth.uid == $user_id"
+          }
+        }
+      }
+    }
+  }
+
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360422737742:android:02ae28dedf2acf1ae7801f",
+        "android_client_info": {
+          "package_name": "com.shivayscreation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVbbAJbE5vhfF_sbNxiS85AMuG1ttaQ-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
