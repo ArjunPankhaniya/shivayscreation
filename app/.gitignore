@@ -1,1 +1,37 @@
-/build
+# Gradle files
+.gradle/
+build/
+*/build/
+out/
+
+# Android Studio
+.idea/
+*.iml
+*.iws
+
+# Local configuration files
+local.properties
+
+# Log files
+*.log
+
+# Android specific
+.DS_Store
+*.apk
+*.ap_ 
+*.dex
+*.class
+*.jar
+
+# Keystore files
+*.jks
+*.keystore
+
+# NDK
+/obj/
+
+
+
+# Operating System files
+Thumbs.db
+Desktop.ini
