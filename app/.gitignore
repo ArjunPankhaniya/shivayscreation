@@ -2,36 +2,45 @@
 .gradle/
 build/
 */build/
-out/
-
-# Android Studio
-.idea/
-*.iml
-*.iws
+**/build/
 
 # Local configuration files
 local.properties
+.idea/
+*.iml
 
-# Log files
+# Android Studio specific files
 *.log
+*.hprof
 
-# Android specific
+# User-specific files
+*.swp
+*~
 .DS_Store
-*.apk
-*.ap_ 
-*.dex
-*.class
-*.jar
+
+# NDK
+obj/
+
+# Gradle Wrapper
+gradle-wrapper.jar
+gradle-wrapper.properties
 
 # Keystore files
 *.jks
 *.keystore
 
-# NDK
-/obj/
+# Android files
+*.apk
+*.ap_
 
+# Proguard
+proguard-project.txt
 
+# Firebase
+google-services.json
 
-# Operating System files
-Thumbs.db
-Desktop.ini
+# Android Device Cache
+/caches/
+
+# lint reports
+lint-report.xml
