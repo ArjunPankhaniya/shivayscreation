@@ -1,20 +1,20 @@
 package com.shivayscreation;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
-
-import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class DashboardActivity extends AppCompatActivity {
 
-    MeowBottomNavigation mBottomNavigation;
+    BottomNavigationView mBottomNavigation;
 
-    int HOME_MENU = 1;
-    int WISHLIST_MENU = 2;
-    int CART_MENU = 3;
-    int PROFILE_MENU = 4;
+    int HOME_MENU = R.id.nav_home;
+    int WISHLIST_MENU = R.id.nav_wishlist;
+    int CART_MENU = R.id.nav_cart;
+    int PROFILE_MENU = R.id.nav_profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,62 +23,35 @@ public class DashboardActivity extends AppCompatActivity {
 
         mBottomNavigation = findViewById(R.id.dashboard_bottom);
 
-        mBottomNavigation.add(new MeowBottomNavigation.Model(HOME_MENU, R.drawable.ic_home));
-        mBottomNavigation.add(new MeowBottomNavigation.Model(CART_MENU, R.drawable.ic_cart));
-        mBottomNavigation.add(new MeowBottomNavigation.Model(WISHLIST_MENU, R.drawable.ic_wishlist));
-        mBottomNavigation.add(new MeowBottomNavigation.Model(PROFILE_MENU, R.drawable.ic_user));
+        // Use the new method to set a listener for item clicks
+        mBottomNavigation.setOnItemSelectedListener(item -> {
+            Fragment fragment = null;
 
-        mBottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
-            @Override
-            public void onClickItem(MeowBottomNavigation.Model item) {
-                // your codes
-                if (item.getId() == HOME_MENU) {
-                    FragmentManager manager = getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.dashboard_relative, new HomeFragment()).commit();
-                    mBottomNavigation.show(HOME_MENU, true);
-                }
-                else if (item.getId() == CART_MENU) {
-                    CartFragment.iTotalPrice = 0;
-                    FragmentManager manager = getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.dashboard_relative, new CartFragment()).commit();
-                    mBottomNavigation.show(CART_MENU, true);
-                }
-                else if (item.getId() == WISHLIST_MENU) {
-                    FragmentManager manager = getSupportFragmentManager();
-                    manager.beginTransaction().replace(R.id.dashboard_relative, new WishlistFragment()).commit();
-                    mBottomNavigation.show(WISHLIST_MENU, true);
-                }
-                else if (item.getId() == PROFILE_MENU) {
-                    FragmentManager manager = getSupportFragmentManager();
-                    ProfileFragment profileFragment = new ProfileFragment();
-                    manager.beginTransaction().replace(R.id.dashboard_relative, profileFragment).commit();
-                    mBottomNavigation.show(PROFILE_MENU, true);
-                    // Retrieve profile data here and pass it to the profileFragment
-                    // For example:
-                    // profileFragment.retrieveProfileData();
-                } else {
-
-                }
+            // Replacing the switch with if-else to avoid 'constant expression required' issue
+            if (item.getItemId() == HOME_MENU) {
+                fragment = new HomeFragment();
+            } else if (item.getItemId() == CART_MENU) {
+                CartFragment.iTotalPrice = 0;
+                fragment = new CartFragment();
+            } else if (item.getItemId() == WISHLIST_MENU) {
+                fragment = new WishlistFragment();
+            } else if (item.getItemId() == PROFILE_MENU) {
+                fragment = new ProfileFragment();
             }
+
+            if (fragment != null) {
+                FragmentManager manager = getSupportFragmentManager();
+                manager.beginTransaction().replace(R.id.dashboard_relative, fragment).commit();
+            }
+            return true;
         });
 
-        mBottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
-            @Override
-            public void onShowItem(MeowBottomNavigation.Model item) {
-                // your codes
-            }
-        });
-
-        mBottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
-            @Override
-            public void onReselectItem(MeowBottomNavigation.Model item) {
-                // your codes
-            }
-        });
-
-        FragmentManager manager = getSupportFragmentManager();
-        manager.beginTransaction().replace(R.id.dashboard_relative, new HomeFragment()).commit();
-        mBottomNavigation.show(HOME_MENU, true);
-
+        // Load the HomeFragment initially if savedInstanceState is null
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.dashboard_relative, new HomeFragment())
+                    .commit();
+            mBottomNavigation.setSelectedItemId(HOME_MENU); // Set the initial selection
+        }
     }
 }

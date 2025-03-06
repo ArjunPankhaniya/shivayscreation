@@ -7,17 +7,17 @@
     android:background="@drawable/background_image"
     tools:context=".DashboardActivity">
 
-    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
-        android:layout_alignParentBottom="true"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/dashboard_bottom"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mbn_backgroundBottomColor="#A6A6A6"
-        app:mbn_circleColor="#ffffff"
-        app:mbn_defaultIconColor="#673AB7"
-        app:mbn_rippleColor="#2f424242"
-        app:mbn_selectedIconColor="#FF2222"
-        app:mbn_shadowColor="#1f212121" />
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/nav_item_icon_color"
+        app:itemTextColor="@color/nav_item_text_color"
+        app:menu="@menu/bottom_navigation_menu"
+        tools:ignore="VisualLintBottomNav" />
+
 
     <RelativeLayout
         android:id="@+id/dashboard_relative"

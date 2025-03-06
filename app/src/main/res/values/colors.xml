@@ -12,5 +12,16 @@
     <color name="bg_blue">#E203A9F4</color>
     <color name="bg_yellow">#FFC107</color>
     <color name="white_transparrant">#80ECECEC</color>
+    <!-- Color for unselected item icons -->
+    <color name="nav_item_icon_color">#A6A6A6</color>
+
+    <!-- Color for selected item icons -->
+    <color name="nav_item_selected_icon_color">#FF2222</color>
+
+    <!-- Color for item text (unselected) -->
+    <color name="nav_item_text_color">#A6A6A6</color>
+
+    <!-- Color for selected item text -->
+    <color name="nav_item_selected_text_color">#FF2222</color>
 
 </resources>
