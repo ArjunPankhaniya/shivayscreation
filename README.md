@@ -36,12 +36,23 @@ _Seamless shopping experience at your fingertips._
 
 ---
 
+
+
 ## 📸 **Project Preview**
 
 
-<img src="https://github.com/user-attachments/assets/cac2863d-b082-44a5-a66c-57b972595d0f" width="200" />
-<img src="https://github.com/user-attachments/assets/ff544dbe-72e5-4c10-9f0b-2e44537d8a8c" width="200" />
-<img src="https://github.com/user-attachments/assets/025626c4-28bf-41f1-9bf1-61fa1f9b51c1" width="200" />
+<img src="https://github.com/user-attachments/assets/17c2e125-a1cb-4726-94ab-c548adb512cf" width="200" />
+<img src="https://github.com/user-attachments/assets/4e65b4df-d948-4b5b-b9a2-6d7d4f4eed0b" width="200" />
+<img src="https://github.com/user-attachments/assets/07a7dfc3-171f-45ad-b2fe-5e9ee0a364dc" width="200" />
+<img src="https://github.com/user-attachments/assets/125fc23d-f5fa-4709-a0ab-fa02a7a6b3b8" width="200" />
+<img src="https://github.com/user-attachments/assets/19f26db0-a50d-466e-9a6d-447c49484350" width="200" />
+<img src="https://github.com/user-attachments/assets/6ece54f3-d47c-4dfd-9d17-10bb1b9b1f73" width="200" />
+<img src="https://github.com/user-attachments/assets/af3ef7a0-aac6-47a4-b014-676556d27633" width="200" />
+<img src="https://github.com/user-attachments/assets/5d849262-c073-41cb-9ae6-796b70ecd572" width="200" />
+<img src="https://github.com/user-attachments/assets/9903c50e-ad50-4654-baaa-0e91c7281625" width="200" />
+<img src="https://github.com/user-attachments/assets/cc536e6f-c3c9-4904-97d2-0cce506480cc" width="200" />
+<img src="https://github.com/user-attachments/assets/560cb7df-edf6-496f-bd0b-45a995171b5a" width="200" />
+<img src="https://github.com/user-attachments/assets/37713d9b-9d3e-491d-b738-2980eb35a180" width="200" />
 
 
 
